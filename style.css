@@ -1,0 +1,117 @@
+/* fixed background  */
+.bg {
+    background: url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1054&q=80');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 30%;
+    position: fixed;
+    min-height: 100%;
+    min-width: 1024px;
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+}
+
+/* div to position content over background */
+#content-fill {
+    position: relative;
+    color: #ffffff;
+    height: auto;
+    overflow: hidden;
+}
+
+.start {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40%;
+}
+
+.finish {
+    margin-bottom: 20%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fa-angle-down,
+.fa-angle-up {
+    animation: updown 2s ease infinite;
+}
+
+@keyframes updown {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(5px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* section */
+
+section {
+    margin: 400px 0px;
+}
+
+/* images */
+
+.image {
+    height: 40vh;
+    background-repeat: no-repeat;
+    opacity: 0;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    /* box shadow */
+    -webkit-box-shadow: 0px 5px 294px 34px rgba(217, 123, 217, 1);
+    -moz-box-shadow: 0px 5px 294px 34px rgba(217, 123, 217, 1);
+    box-shadow: 0px 5px 294px 34px rgba(217, 123, 217, 1);
+}
+
+.text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+}
+
+/* Y axis  */
+.from-bottom {
+    transform: translateY(100px);
+    transition: 1s all ease-in-out;
+}
+
+.appear-bottom {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+
+/* X axis */
+.from-left {
+    transform: translateX(-100px);
+    transition: 1s all ease-in-out;
+}
+
+.appear-left {
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+.from-right {
+    transform: translateX(100px);
+    transition: 1s all ease-in-out;
+}
+
+.appear-right {
+    opacity: 1;
+    transform: translateX(0px);
+}
